@@ -376,7 +376,7 @@ class EncoderSigned {
 public:
   template<typename UnsignedType>
   inline static UnsignedType encode(UnsignedType x) {
-    return x ^ (1 << (CHAR_BIT * sizeof(UnsignedType) - 1));
+    return x ^ (UnsignedType(1) << (CHAR_BIT * sizeof(UnsignedType) - 1));
   }
 };
 

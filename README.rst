@@ -14,6 +14,8 @@ OpenMP を用いて並列化した Radix Sort です．
 ------
 sample.cc や measure.cc を見ると大体分かると思います．
 
+コンパイル時に -fopenmp を付けないと並列化されないので注意してください．
+
 性能
 ----
 measure.cc で 2 億要素の int 配列のソートの時間を測ります．

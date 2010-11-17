@@ -97,10 +97,10 @@ typedef Types<unsigned char, char, signed char,
               float, double> SortingTypes;
 
 template<typename T>
-class MapSortTest : public testing::Test {};
-TYPED_TEST_CASE(MapSortTest, SortingTypes);
+class ParallelRadixSortTest : public testing::Test {};
+TYPED_TEST_CASE(ParallelRadixSortTest, SortingTypes);
 
-TYPED_TEST(MapSortTest, KeySort) {
+TYPED_TEST(ParallelRadixSortTest, KeySort) {
   TypeParam *dat = new TypeParam[kMaxNumElems];
   TypeParam *ans = new TypeParam[kMaxNumElems];
   ASSERT_NE(reinterpret_cast<TypeParam*>(NULL), dat);

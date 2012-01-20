@@ -102,7 +102,7 @@ private:
   size_t **out_buf_n_;
 
   int num_threads_;
-  int *pos_bgn_, *pos_end_;
+  size_t *pos_bgn_, *pos_end_;
   ValueManager *value_manager_;
 
   void DeleteAll();
@@ -202,8 +202,8 @@ void ParallelRadixSortInternal
     }
   }
 
-  pos_bgn_ = new int[max_threads];
-  pos_end_ = new int[max_threads];
+  pos_bgn_ = new size_t[max_threads];
+  pos_end_ = new size_t[max_threads];
 }
 
 template<typename PlainType, typename UnsignedType, typename Encoder,

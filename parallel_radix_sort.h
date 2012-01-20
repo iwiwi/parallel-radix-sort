@@ -27,8 +27,8 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#ifndef _PARALLEL_RADIX_SORT_H_
-#define _PARALLEL_RADIX_SORT_H_
+#ifndef PARALLEL_RADIX_SORT_H_
+#define PARALLEL_RADIX_SORT_H_
 
 #ifdef _OPENMP
 #include <omp.h>
@@ -614,4 +614,4 @@ void SortPairs(KeyType *keys, ValueType *vals, size_t num_elems, int num_threads
 }
 };  // namespace parallel radix sort
 
-#endif  // _PARALLEL_RADIX_SORT_H_
+#endif  // PARALLEL_RADIX_SORT_H_
